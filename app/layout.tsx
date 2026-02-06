@@ -25,13 +25,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.jpeg" type="image/jpeg" />
         <link rel="shortcut icon" href="/favicon.jpeg" type="image/jpeg" />
         <link rel="apple-touch-icon" href="/favicon.jpeg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link href="https://unpkg.com/phosphor-icons@1.4.3/src/css/phosphor.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/locomotivemtl/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
       </head>
-      <body className="font-sans" style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>{children}</body>
+      <body style={{ fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>{children}</body>
     </html>
   )
 }
