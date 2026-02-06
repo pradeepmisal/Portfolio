@@ -188,18 +188,18 @@ export default function Achievements() {
   }, [api])
 
   return (
-    <section ref={sectionRef} id="achievements" className="section-padding relative">
+    <section ref={sectionRef} id="achievements" className="py-8 relative scroll-mt-20">
       {/* Background orbs */}
       <div className="floating-orb floating-orb-1"></div>
       <div className="floating-orb floating-orb-2"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-3xl font-bold mb-2">
             My <span className="gradient-text">Achievements</span>
           </h2>
-          <p className="text-gray-400 text-base max-w-2xl mx-auto font-light">
+          <p className="text-gray-400 text-sm max-w-2xl mx-auto font-light">
             Recognition and awards I've received for my work and contributions
           </p>
         </div>
@@ -209,40 +209,40 @@ export default function Achievements() {
           <CarouselContent className="-ml-4">
             {achievements.map((achievement, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="glass-card p-4 rounded-lg h-full flex flex-col">
-                  <div className="relative overflow-hidden rounded-md mb-4 group">
+                <div className="glass-card p-3 rounded-lg h-full flex flex-col">
+                  <div className="relative overflow-hidden rounded-md mb-3 group">
                     <Image
                       src={achievement.image || "/placeholder.svg"}
                       alt={achievement.title}
                       width={250}
                       height={150}
-                      className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute top-2 right-2">
-                      <achievement.icon className="h-6 w-6 text-yellow-400 neon-glow" />
+                      <achievement.icon className="h-5 w-5 text-yellow-400 neon-glow" />
                     </div>
                     <div className="absolute top-2 left-2">
-                      <span className="glass px-2 py-0.5 rounded-full text-cyan-400 text-xs font-medium">
+                      <span className="glass px-2 py-0.5 rounded-full text-cyan-400 text-[10px] font-medium">
                         {achievement.category}
                       </span>
                     </div>
                   </div>
 
-                  <div className="mb-3 flex-grow">
+                  <div className="mb-2 flex-grow">
                     <div className="flex justify-between items-start mb-1">
                       {achievement.amount && (
-                        <span className="glass px-2 py-0.5 rounded-full text-green-400 text-xs font-medium neon-glow">
+                        <span className="glass px-2 py-0.5 rounded-full text-green-400 text-[10px] font-medium neon-glow">
                           {achievement.amount}
                         </span>
                       )}
                     </div>
-                    <h3 className="gradient-text mb-1">{achievement.title}</h3>
-                    <p className="text-cyan-400 font-medium text-xs">
+                    <h3 className="gradient-text mb-1 text-sm font-semibold">{achievement.title}</h3>
+                    <p className="text-cyan-400 font-medium text-[10px]">
                       {achievement.organization} • {achievement.date}
                     </p>
                   </div>
 
-                  <p className="text-gray-300 leading-relaxed text-sm font-light">{achievement.description}</p>
+                  <p className="text-gray-300 leading-relaxed text-xs font-light">{achievement.description}</p>
                 </div>
               </CarouselItem>
             ))}
@@ -250,6 +250,27 @@ export default function Achievements() {
           <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-20" />
           <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-20" />
         </Carousel>
+
+        {/* Additional Info */}
+        <div className="text-center mt-4">
+          <p className="text-gray-400 text-sm mb-2 font-light">
+            🏆 <span className="gradient-text font-semibold">7-time hackathon winner</span> across national and
+            international competitions
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 text-[10px]">
+            {[
+              "Health-Tech solutions",
+              "Sustainability solutions",
+              "DeFi Innovation",
+              "AR Innovation",
+              "GenAI Solutions",
+            ].map((tag, i) => (
+              <span key={i} className="glass px-2 py-0.5 rounded-full text-gray-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

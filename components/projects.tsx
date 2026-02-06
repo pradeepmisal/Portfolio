@@ -16,9 +16,11 @@ export default function Projects() {
       description:
         "Decentralized AI-based auditing platform for securing smart contracts in DeFi. Ensures real-time scam detection with high accuracy using advanced machine learning algorithms.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-YaQZb7gVK3TU4DUmF2H9fboN5AqPSi.png",
-      technologies: ["React", "Blockchain", "AI/ML", "Smart Contracts", "DeFi", "Web3"],
-      github: "https://github.com/pradeepmisal/ASSUREFI",
+      technologies: ["React", "LLM Integration", "Smart Contracts", "Node.js", "Express.js"],
+      github: "https://github.com/pradeepmisal/ASSURIFI_MODIFIED",
+      live: "https://assurefi.app",
       category: "AI",
+      isDemo: true,
     },
     {
       title: "MEDIAR",
@@ -52,14 +54,14 @@ export default function Projects() {
       category: "Sustainability",
     },
     {
-      title: "Physics AR Learning Platform",
+      title: "DhanSetu – Financial Assistant for Gig Workers",
       description:
-        "Augmented Reality educational project that simplifies complex physics concepts for school students. Uses AR markers to create interactive 3D physics models.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-8zNWMljYKIIvxcjapIfnxluN9jAXPB.png",
-      technologies: ["AR", "Unity", "Blender", "3D Physics", "Mobile", "Interactive Learning"],
-      github: "https://github.com/pradeepmisal/Physics-AR-Project",
-      live: "https://drive.google.com/drive/folders/1JuDKUdyR_CEWRhjydAa3wyDV9I8LQWyu?usp=sharing",
-      category: "AR & Education",
+        "Financial stability platform for India's gig economy. Features auto-transaction tracking, income forecasting, and a multilingual AI assistant to help workers achieve financial security.",
+      image: "/dhansetu-dashboard.png",
+      technologies: ["React Native", "Supabase", "Langchain", "FastAPI", "AWS"],
+      github: "https://github.com/pradeepmisal/dhansetu-finance-tracker_mumbai_hacks",
+      live: "https://drive.google.com/drive/folders/16pUe26xoHJchRrmCTBwgZAt3LcmyW0E4?usp=sharing",
+      category: "FinTech & AI",
       isDemo: true,
     },
     {
@@ -67,7 +69,7 @@ export default function Projects() {
       description:
         "GenAI-powered Agent that helps innovators turn raw ideas into actionable startup plans through market research, business canvas generation, and execution roadmaps.",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-MV1A8vs3WVRX8saHp0eQzWN5gJ0P9o.png",
-      technologies: ["GenAI", "React","LangChain",  "OpenAI", "Vector Database", "NLP"],
+      technologies: ["GenAI", "React", "LangChain", "OpenAI", "Vector Database", "NLP"],
       github: "https://github.com/pradeepmisal/Elevate-AI-lab",
       live: "https://elevateai-frontend.vercel.app/",
       category: "AI & Career",
@@ -109,7 +111,7 @@ export default function Projects() {
           // For desktop, ensure elements are visible by default
           if (projectsGridRef.current) {
             Array.from(projectsGridRef.current.children).forEach((child) => {
-              ;(child as HTMLElement).style.opacity = "1"
+              ; (child as HTMLElement).style.opacity = "1"
             })
           }
         }
@@ -151,26 +153,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Additional Info */}
-        <div className="text-center mt-10">
-          <p className="text-gray-400 text-base mb-3 font-light">
-            🏆 <span className="gradient-text font-semibold">7-time hackathon winner</span> across national and
-            international competitions
-          </p>
-          <div className="flex flex-wrap justify-center gap-2 text-xs">
-            {[
-              "Health-Tech solutions",
-              "Sustainability solutions",
-              "DeFi Innovation",
-              "AR Innovation",
-              "GenAI Solutions",
-            ].map((tag, i) => (
-              <span key={i} className="glass px-2.5 py-0.5 rounded-full text-gray-300">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   )
